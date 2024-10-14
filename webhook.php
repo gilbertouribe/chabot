@@ -1,6 +1,6 @@
 <?php
     const TOKEN_ANDERCODE = "ANDERCODEPHPAPIMETA2";
-    const WEBHOOK_URL = "https://anderson-bastidas.com/webhook.php";
+    const WEBHOOK_URL = "https://whatsappapi.sisedigital.com/webhook.php";
 
     function verificarToken($req,$res){
         try{
