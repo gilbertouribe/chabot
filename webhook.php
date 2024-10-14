@@ -63,7 +63,7 @@
                 "type" => "text",
                 "text"=> [
                     "preview_url" => false,
-                    "body"=> "Hola visita mi web andercon-bastidas.com"
+                    "body"=> "Bienvenidos a SISEDigitalcom"
                 ]
             ]);
         }else if ($comentario=='1') {
