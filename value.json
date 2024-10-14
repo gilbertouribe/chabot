@@ -1,0 +1,26 @@
+{
+    "messaging_product": "whatsapp",
+    "metadata": {
+        "display_phone_number": "15550166655",
+        "phone_number_id": "113319844996763"
+    },
+    "contacts": [
+        {
+            "profile": {
+                "name": "Andercode"
+            },
+            "wa_id": "51981233834"
+        }
+    ],
+    "messages": [
+        {
+            "from": "51981233834",
+            "id": "wamid.HBgLNTE5ODEyMzM4MzQVAgASGBQzRUIwMzIwNTg4RUFDMTRDMTkxNQA=",
+            "timestamp": "1677023179",
+            "text": {
+                "body": "test"
+            },
+            "type": "text"
+        }
+    ]
+}
