@@ -34,7 +34,7 @@
             
             $archivo = "log.txt";
             
-            if (!verificarTextoEnArchivo($id, $archivo)) {
+            if (!verificarTextoEnArchivo($id, $archivo)) {                
                 $archivo = fopen($archivo, "a");
                 $texto = json_encode($id).",".$numero.",".$comentario;
                 fwrite($archivo, $texto);
@@ -55,7 +55,7 @@
     function EnviarMensajeWhastapp($comentario,$numero){
         $comentario = strtolower($comentario);
 
-        if (strpos($comentario,'hola') !==false){
+        if (strpos($comentario,'hola') !== false){
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -63,10 +63,10 @@
                 "type" => "text",
                 "text"=> [
                     "preview_url" => false,
-                    "body"=> "Bienvenidos a SISEDigitalcom"
+                    "body" => "Bienvenidos a SISEDigital"
                 ]
             ]);
-        }else if ($comentario=='1') {
+        }elseif ($comentario=='1') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -74,10 +74,10 @@
                 "type" => "text",
                 "text"=> [
                     "preview_url" => false,
-                    "body"=> "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    "body" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 ]
             ]);
-        }else if ($comentario=='2') {
+        }elseif ($comentario=='2') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -90,7 +90,7 @@
                     "address" => "Cercado de Lima"
                 ]
             ]);
-        }else if ($comentario=='3') {
+        }elseif ($comentario=='3') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -101,7 +101,7 @@
                     "caption" => "Temario del Curso #001"
                 ]
             ]);
-        }else if ($comentario=='4') {
+        }elseif ($comentario=='4') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -111,7 +111,7 @@
                     "link" => "https://filesamples.com/samples/audio/mp3/sample1.mp3",
                 ]
             ]);
-        }else if ($comentario=='5') {
+        }elseif ($comentario=='5') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",
                 "to" => $numero,
@@ -120,7 +120,7 @@
                     "body" => "Introducción al curso! https://youtu.be/6ULOE2tGlBM"
                 )
             ]);
-        }else if ($comentario=='6') {
+        }elseif ($comentario=='6') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",
                 "recipient_type" => "individual",
@@ -131,7 +131,7 @@
                     "body" => "🤝 En breve me pondré en contacto contigo. 🤓"
                 )
             ]);
-        }else if ($comentario=='7') {
+        }elseif ($comentario=='7') {
             $data = json_encode([
                 "messaging_product" => "whatsapp",
                 "recipient_type" => "individual",
@@ -142,7 +142,7 @@
                     "body" => "📅 Horario de Atención: Lunes a Viernes. \n🕜 Horario: 9:00 a.m. a 5:00 p.m. 🤓"
                 )
             ]);
-        }else if (strpos($comentario,'gracias') !== false) {
+        }elseif (strpos($comentario,'gracias') !== false) {
             $data = json_encode([
                 "messaging_product" => "whatsapp",
                 "recipient_type" => "individual",
@@ -153,7 +153,7 @@
                     "body" => "Gracias a ti por contactarme. 🤩"
                 )
             ]);
-        }else if (strpos($comentario,'adios') !== false || strpos($comentario,'bye') !== false || strpos($comentario,'nos vemos') !== false || strpos($comentario,'adiós') !== false){
+        }elseif (strpos($comentario,'adios') !== false || strpos($comentario,'bye') !== false || strpos($comentario,'nos vemos') !== false || strpos($comentario,'adiós') !== false){
             $data = json_encode([
                 "messaging_product" => "whatsapp",
                 "recipient_type" => "individual",
@@ -164,7 +164,7 @@
                     "body" => "Hasta luego. 🌟"
                 )
             ]);
-        }else if (strpos($comentario,'gchatgpt:')!== false){
+        }elseif (strpos($comentario,'gchatgpt:')!== false){
             $texto_sin_gchatgpt = str_replace("gchatgpt: ", "", $comentario);
 
             $apiKey = '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';
@@ -200,7 +200,7 @@
                     "body" => $responseArr['choices'][0]['text']
                 )
             ]);
-        }else{
+        }elseif(strpos($comentario,'menu') !== false){
             $data = json_encode([
                 "messaging_product" => "whatsapp",    
                 "recipient_type"=> "individual",
@@ -216,14 +216,14 @@
         $options = [
             'http' => [
                 'method' => 'POST',
-                'header' => "Content-type: application/json\r\nAuthorization: Bearer EAAGAxCqc0QwBO9wekodb1dsDZBECE6f2pZBjNRMakZCKZCv7XizD2chqo6vNZBMeYmEISx8eeKgr2paQ518SjUuVEezT0okcK3CZC25aOHTJj4vUxKqwo6IMZB6p4THhpXTE1dC0nTdx0baPsfodYKUZARdT1YG2JsJZBI50TGAqGRzEjTPjSxJsIBIKebz7orbwudZCVgRUZCWTAoWhnDX1MFZBFPoS04b80xXER1cZD\r\n",
+                'header' => "Content-type: application/json\r\nAuthorization: Bearer EAAGAxCqc0QwBO7uwjfTn8ZCNS5khWPgcN5mzUFJa1X0uOFHWumLegvu3OtYAKYILZAqCw7bZCAzrVYoZAsVOppbl8O1fHi7fhrLWZB14J352ZCdIPkeOuLcIivfZC8ZCP87CtO8Q20JVnIdyoOie2SIT3oH9zLy4dZBm7TfpG6tAywCkwitcAfsCzvURHscaL07ysFp1raixueqrr7nLSoz0O3LjNO2J2sZCXParYZD\r\n",
                 'content' => $data,
                 'ignore_errors' => true
             ]
         ];
 
         $context = stream_context_create($options);
-        $response = file_get_contents('https://graph.facebook.com/v17.0/117721278011867/messages', false, $context);
+        $response = file_get_contents('https://graph.facebook.com/v20.0/217428934797441/messages', false, $context);
 
         if ($response === false) {
             echo "Error al enviar el mensaje\n";
