@@ -63,7 +63,7 @@
                 "type" => "text",
                 "text"=> [
                     "preview_url" => false,
-                    "body" => "🚀Bienvenidos a SISEDigital.\n\n📌Por favor, ingresa un número#️⃣ para recibir información.\n1️⃣. Información del Curso.❔\n2️⃣. Ubicación del local.📍\n3️⃣. Enviar temario en pdf. \n4️⃣. Audio explicando curso. 🎧\n5️⃣. Video de Introducción.⏯️\n6️⃣. Hablar con AnderCode.🙋‍♂️\n7️⃣. Horario de Atención.🕜"
+                    "body" => "Bienvenidos a SISEDigital.🚀\n\n📌Por favor, ingresa un número#️⃣ para recibir información.\n\n1️⃣.Inducción a la plataforma\n2️⃣.Cambiar la Contraseña al Usuario\n3️⃣. Abrir Periodo de calificaciones\n4️⃣. Cambiar Contraseña a los Estudiantes\n5️⃣.Descargar Lista de Contraseña Estudiantes.\n6️⃣.Agregar Estudiante a Planilla\n7️⃣.Cambiar Docente en la Asignación\n8️⃣.Asistencia de Estudiante\n9️⃣.Cambiar Estado de Estudiante"
                 ]
             ]);
         }elseif ($comentario=='1') {
