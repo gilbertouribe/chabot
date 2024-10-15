@@ -1,7 +1,8 @@
 <?php
     const TOKEN_ANDERCODE = "ANDERCODEPHPAPIMETA2";
     const WEBHOOK_URL = "https://whatsappapi.sisedigital.com/webhook.php";
-
+    const TOKEN_WHATSAPP = "EAAGAxCqc0QwBOzDJC1ejcMnwzKZB2gEe8bLIZAP3wmR1khxZBzNZCmWwAdJX0JZCP5QGjRcNe7QuSAgBnkeJWuUmy4yZAgulG3i6xrRQOv4DJdOAMmSQgnBFNWZAlfRSbuGDbd718ed0JvyZAnz36c2Kt087MVksfPnjGuAp7YM9WRRmatUtCKoUM6UTgRsOAEM16ejbZBZBefeHZAQz9pGELHod2m44V1ZAt9lVCp4ZD";
+    
     function verificarToken($req,$res){
         try{
             $token = $req['hub_verify_token'];
@@ -216,7 +217,7 @@
         $options = [
             'http' => [
                 'method' => 'POST',
-                'header' => "Content-type: application/json\r\nAuthorization: Bearer EAAGAxCqc0QwBOzDJC1ejcMnwzKZB2gEe8bLIZAP3wmR1khxZBzNZCmWwAdJX0JZCP5QGjRcNe7QuSAgBnkeJWuUmy4yZAgulG3i6xrRQOv4DJdOAMmSQgnBFNWZAlfRSbuGDbd718ed0JvyZAnz36c2Kt087MVksfPnjGuAp7YM9WRRmatUtCKoUM6UTgRsOAEM16ejbZBZBefeHZAQz9pGELHod2m44V1ZAt9lVCp4ZD\r\n",
+                'header' => "Content-type: application/json\r\nAuthorization: Bearer ".TOKEN_WHATSAPP."\r\n",
                 'content' => $data,
                 'ignore_errors' => true
             ]
