@@ -63,7 +63,7 @@
                 "type" => "text",
                 "text"=> [
                     "preview_url" => false,
-                    "body" => "Bienvenidos a SISEDigital"
+                    "body" => "🚀Bienvenidos a SISEDigital.\n\n📌Por favor, ingresa un número#️⃣ para recibir información.\n1️⃣. Información del Curso.❔\n2️⃣. Ubicación del local.📍\n3️⃣. Enviar temario en pdf. \n4️⃣. Audio explicando curso. 🎧\n5️⃣. Video de Introducción.⏯️\n6️⃣. Hablar con AnderCode.🙋‍♂️\n7️⃣. Horario de Atención.🕜"
                 ]
             ]);
         }elseif ($comentario=='1') {
